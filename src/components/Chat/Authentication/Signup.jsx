@@ -1,6 +1,6 @@
 import { useState } from "react"
 import axios from "axios"; 
-import {useHistory} from "react-router-dom";
+// import {useHistory} from "react-router-dom";
 
 const Signup = () => {
   const [email, setEmail] = useState();
@@ -9,7 +9,7 @@ const Signup = () => {
   const [pic, setPic] = useState();
   const [name, setName] = useState()
   const [loading, setLoading] = useState(false);
-  const history = useHistory()
+  // const history = useHistory()
 
 
   const postDetails = (pics) => {
@@ -87,8 +87,8 @@ const Signup = () => {
         </div>
       ),
        localStorage.setItem("userInfo", JSON.stringify(data));
-       history.push("/chats")
-      } catch (err) {
+      //  history.push("/chats")
+    }catch (err) {
         return (
           <div className="toast toast-end">
           <div className="alert alert-success">
@@ -96,7 +96,7 @@ const Signup = () => {
           </div>
         </div>
         )
-        setLoading(false)
+        // setLoading(false)
       }
   }
 

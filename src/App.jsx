@@ -1,7 +1,9 @@
-import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import Homepage from "./pages/Homepage.jsx"
-import ChatPage from './pages/Chatpage.jsx'
+import Register from "./pages/Register.jsx"
+import Chat from './pages/Chat.jsx'
+import Login from './pages/Login.jsx'
+import SetAvatar from './pages/SetAvatar.jsx'
+
 
 
 function App() {
@@ -10,8 +12,10 @@ function App() {
   return (
     <div className="apps" >
       <Routes> 
-        <Route path="/" element={<Homepage />} />
-        <Route path="/chats" element={<ChatPage />} />
+        <Route path="/register" element={<Register/>} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/setAvatar" element={<SetAvatar />} />
+        <Route path="/" element={<Chat />} />
       </Routes>
     </div>
   )
